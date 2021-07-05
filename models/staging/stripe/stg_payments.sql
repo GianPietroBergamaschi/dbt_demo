@@ -1,5 +1,5 @@
 
-/* stg_payments.sql */
+/* stg_payments.sql v2 */
 
 select
     id as payment_id,
@@ -11,4 +11,4 @@ select
     amount / 100 as amount,
     created as created_at
 
-from `dbt-tutorial.stripe.payment`
+from {{ source('stripe','payment') }}

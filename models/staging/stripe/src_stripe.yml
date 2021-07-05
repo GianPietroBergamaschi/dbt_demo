@@ -1,0 +1,10 @@
+
+# src_stripe.yml
+
+version: 2
+
+sources:
+  - name: stripe
+    database: dbt-tutorial
+    tables:
+      - name: payment
