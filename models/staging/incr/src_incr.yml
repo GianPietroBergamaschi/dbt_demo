@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: dbt_gbergamaschi
+    database: dataops-310808
+    loaded_at_field: last_modify
+    freshness:
+      error_after: {count: 1, period: hour}
+    tables:
+      - name: src_payments_incr
